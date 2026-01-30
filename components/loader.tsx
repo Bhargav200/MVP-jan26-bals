@@ -45,15 +45,15 @@ const Loader: React.FC = () => {
 
     const animate = () => {
       if (targetProgress < 100) {
-        // Moderate speed increments for visible flow effect
-        let increment = Math.random() * 0.8 + 0.2 // Random between 0.2 and 1.0
-        if (targetProgress > 70 && targetProgress < 85) increment *= 0.5 // Slight slow down near end for suspense
+        // Slower speed increments for a more deliberate, premium feel
+        let increment = Math.random() * 0.4 + 0.1 // Random between 0.1 and 0.5 (was 0.2-1.0)
+        if (targetProgress > 70 && targetProgress < 85) increment *= 0.3 // More suspense near the end
         targetProgress += increment
       }
 
-      // Smooth interpolation (0.15 -> 0.1)
-      currentProgress += (targetProgress - currentProgress) * 0.1
-      time += 0.08 // Keep wave animation speed
+      // Smoother interpolation (0.1 -> 0.05) for liquid feel
+      currentProgress += (targetProgress - currentProgress) * 0.05
+      time += 0.05 // Slower wave animation speed
 
       if (currentProgress >= 99.5) {
         currentProgress = 100

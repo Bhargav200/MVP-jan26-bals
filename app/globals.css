@@ -405,7 +405,7 @@
 }
 
 #loader-wrapper svg {
-  width: clamp(280px, 80vw, 1000px);
+  width: clamp(250px, 60vw, 800px);
   height: auto;
   overflow: visible;
   filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
@@ -414,21 +414,21 @@
 .text-base {
   fill: var(--blue-dianne);
   font-weight: 900;
-  font-size: 130px;
+  font-size: 110px;
   letter-spacing: -0.04em;
   opacity: 0.3;
 }
 
 .text-liquid {
   font-weight: 900;
-  font-size: 130px;
+  font-size: 110px;
   letter-spacing: -0.04em;
   filter: url(#glowFilter);
 }
 
 .loader-meta {
   position: absolute;
-  bottom: -60px;
+  bottom: -40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -509,10 +509,11 @@ body.loaded > *:not(#loader-wrapper):not(script) {
   }
 }
 
-/* Ensure initial state is hidden for smoother transition */
+/* Ensure initial state is hidden for smoother transition - REMOVED for safety
 body:not(.loaded) > *:not(#loader-wrapper):not(script) {
   opacity: 0;
-}
+} 
+*/
 
 .bottom-pill {
   position: absolute;
